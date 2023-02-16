@@ -18,8 +18,8 @@ const HourCard = ({ hourlyForecast }) => {
   return (
     <div className="HourCard">
       <h6>{currHour}</h6>
-      <img src={condition.icon} alt={condition.text} />
-      <span>{temp_f}˚</span>
+      <img src={condition.icon} alt={condition.text} width="48" height="48" />
+      <span>{Math.round(temp_f)}˚</span>
     </div>
   );
 };
