@@ -1,6 +1,13 @@
+import { useContext } from "react";
+
 import "./PrecipitationPanel.styles.scss";
 
-const PrecipitationPanel = ({ precipitation }) => {
+import { ForecastContext } from "../../context/Forecast.context";
+
+const PrecipitationPanel = () => {
+  const { data } = useContext(ForecastContext);
+  const precipitation = data.current.precip_in + '"';
+
   return (
     <div className="Panel">
       <h4>
