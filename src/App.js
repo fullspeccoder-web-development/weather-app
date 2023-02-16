@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import HourlyPanel from "./components/hourly-panel/HourlyPanel.component";
+import MainInfo from "./components/main-info/MainInfo.component";
+
+import DATA from "./data.json";
 
 function App() {
+  const { name } = DATA.location;
+  const { temp_f } = DATA.current;
+  const { text, icon } = DATA.current.condition;
+  const { maxtemp_f, mintemp_f } = DATA.forecast.forecastday[0].day;
+  const { forecastday } = DATA.forecast;
+  const currentData = {
+    name: name,
+    tempF: temp_f,
+    text: text,
+    icon: icon,
+    maxTempF: maxtemp_f,
+    minTempF: mintemp_f,
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainInfo currentData={currentData} />
+      <HourlyPanel forecastDay={forecastday[0].hour} />
     </div>
   );
 }

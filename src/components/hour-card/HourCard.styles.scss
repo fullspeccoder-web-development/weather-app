@@ -1,0 +1,16 @@
+.HourCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.75rem;
+  color: white;
+
+  h6 {
+    font-size: .75rem;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
