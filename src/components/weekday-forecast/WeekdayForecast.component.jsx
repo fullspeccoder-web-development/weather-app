@@ -1,7 +1,6 @@
 import "./WeekdayForecast.styles.scss";
 
 const WeekdayForecast = ({ weekdayForecast }) => {
-  const day = new Date(weekdayForecast.date_epoch).getDay();
   return (
     <div className="WeekdayForecast">
       <span>Today</span>

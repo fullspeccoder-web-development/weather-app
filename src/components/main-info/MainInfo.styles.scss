@@ -1,9 +1,7 @@
+@import '../../data.scss';
+
 .MainInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  @include flexDisplay(column, center, 0.5rem);
   padding: 1rem 0;
   text-align: center;
   grid-column: span 6;
@@ -23,3 +21,13 @@
     font-size: 1.25rem;
   }
 }
+
+// padding: 1rem;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   gap: 1.5rem;
+//   border-radius: 15px;
+//   background-color: #7171ba;
+//   grid-column: span 4;
+//   overflow: scroll;

@@ -1,19 +1,17 @@
+@import '../../data.scss';
+
 .WeekdayForecast {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexDisplay(row, space-between, 0);
   border-top: 1px solid white;
-  padding-top: 1rem;
   color: white;
+  padding: 0.5rem 0;
   font-weight: 500;
   font-size: 1.5rem;
 
   div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 25%;
-    font-size: 1.25rem;
+    @include flexDisplay(row, center, 1rem);
+    width: 50%;
+    font-size: 1.75rem;
 
     .bar {
       width: 50%;
