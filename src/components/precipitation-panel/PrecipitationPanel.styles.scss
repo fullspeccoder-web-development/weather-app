@@ -6,6 +6,7 @@
   padding: 0.5rem 1rem;
   border-radius: $borderRadius;
   background-color: $backgroundColor;
+  backdrop-filter: blur(8px);
   color: white;
 
   h4 {

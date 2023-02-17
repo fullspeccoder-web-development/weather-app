@@ -9,6 +9,7 @@
   padding: 1rem;
   border-radius: $borderRadius;
   background-color: $backgroundColor;
+  backdrop-filter: blur(8px);
 
   .AQPanelText {
     h4 {
